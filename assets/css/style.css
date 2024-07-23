@@ -1045,11 +1045,29 @@ ul {
 
 .project-item {
   display: none;
+  position: relative;
 }
 
 .project-item.active {
   display: block;
   animation: scaleUp 0.25s ease forwards;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 84%;
+  width: 100%;
+  color: aliceblue;
+  opacity: 0;
+  z-index: 10;
+  transition: var(--transition-1);
+}
+
+.project-item:hover > .info-box {
+  opacity: 1;
 }
 
 @keyframes scaleUp {
